@@ -15,6 +15,12 @@ elseif ispc
     slash='\';
 end
 
+% Check execution directory
+if ~contains(pwd,'TERRA_3D')
+    disp('Execution error: You need to be in the "TERRA_3D\" directory')
+    return
+end
+
 % Configuration of the testing parameters
 %  iterations   = nº of executions with different scenarios
 %  printResults = LoL
